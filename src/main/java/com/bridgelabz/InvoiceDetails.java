@@ -36,5 +36,4 @@ public class InvoiceDetails {
 		this.avgFarePerRide = avgFarePerRide;
 	}
 	
-	
 }

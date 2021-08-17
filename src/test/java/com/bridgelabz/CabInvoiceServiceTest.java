@@ -8,14 +8,14 @@ import java.util.List;
 import org.junit.Test;
 
 public class CabInvoiceServiceTest {
-	InvoiceGeneratorService iservice = new InvoiceGeneratorService();
+	InvoiceGeneratorService iService = new InvoiceGeneratorService();
 	
 	@Test
 	public void testCalculatorFare() {
 		final double distance = 100;
 		final int time = 50;
 		
-		double fare = iservice.calculateFare(distance, time);
+		double fare = iService.calculateFare(distance, time);
 		assertEquals(1050, fare, 0);
 	}
 	
@@ -29,7 +29,7 @@ public class CabInvoiceServiceTest {
 		ride.add(ride1);
 		ride.add(ride2);
 		
-		double totalFare = iservice.calculateFareForAllRides(ride);
+		double totalFare = iService.calculateFareForAllRides(ride);
 		assertEquals(1355, totalFare, 0);
 	}
 }
